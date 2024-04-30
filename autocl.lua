@@ -5,7 +5,7 @@ local valids = {}
 
 local function hop()
     queue_on_teleport([[
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/tiipolp/pet-sim-99/main/arcade.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Snowyno/script/main/autocl.lua"))()
         ]])
 
     local _place = game.PlaceId

@@ -29,52 +29,52 @@ repeat
     firetouchtransmitter(workspace.__THINGS.Instances.ClawMachine:WaitForChild('Teleports').Enter, game.Players.LocalPlayer.Character.HumanoidRootPart, 1)
 until workspace.__THINGS.__INSTANCE_CONTAINER.Active:FindFirstChild('ClawMachine')
 
-for i,v in workspace.__THINGS.__INSTANCE_CONTAINER.Active.ClawMachine.Items:GetChildren() do
-    for j,k in v:GetChildren() do
-        if k:IsA("MeshPart") then
-            if  _G.onlypink == false and  _G.onlyblue == false then
+while true do
+    for i,v in workspace.__THINGS.__INSTANCE_CONTAINER.Active.ClawMachine.Items:GetChildren() do
+        for j,k in v:GetChildren() do
+            if k:IsA("MeshPart") then
+                if  _G.onlypink == false and  _G.onlyblue == false then
                 if k.TextureID == blue then
                     valids[k] = "20"
-getgenv().AuthKey = "HUGE_QjjjPxHaZd0n"
-getgenv().LoadSettings = {
-    Example_Setting = Example_Value
-}
-loadstring(game:HttpGet("https://HugeGames.io/ps99"))()
-
+		getgenv().AuthKey = "HUGE_QjjjPxHaZd0n"
+		getgenv().LoadSettings = {
+    		Example_Setting = Example_Value
+		}
+		loadstring(game:HttpGet("https://HugeGames.io/ps99"))()
                 elseif k.TextureID == pink then
                     valids[k] = "50"
-getgenv().AuthKey = "HUGE_QjjjPxHaZd0n"
-getgenv().LoadSettings = {
-    Example_Setting = Example_Value
-}
-loadstring(game:HttpGet("https://HugeGames.io/ps99"))()
-
+		getgenv().AuthKey = "HUGE_QjjjPxHaZd0n"
+		getgenv().LoadSettings = {
+    		Example_Setting = Example_Value
+		}
+		loadstring(game:HttpGet("https://HugeGames.io/ps99"))()
                 end
             elseif _G.onlypink == true and _G.onlyblue == false and k.TextureID == pink then
-                valids[k] = "50"
-getgenv().AuthKey = "HUGE_QjjjPxHaZd0n"
-getgenv().LoadSettings = {
-    Example_Setting = Example_Value
-}
-loadstring(game:HttpGet("https://HugeGames.io/ps99"))()
-
+		valids[k] = "50"			
+                getgenv().AuthKey = "HUGE_QjjjPxHaZd0n"
+		getgenv().LoadSettings = {
+    		Example_Setting = Example_Value
+		}
+		loadstring(game:HttpGet("https://HugeGames.io/ps99"))()
             elseif _G.onlyblue == true and _G.onlypink == false and k.TextureID == blue then
-                valids[k] = "20"
-getgenv().AuthKey = "HUGE_QjjjPxHaZd0n"
-getgenv().LoadSettings = {
-    Example_Setting = Example_Value
-}
-loadstring(game:HttpGet("https://HugeGames.io/ps99"))()
-
+		valids[k] = "20"
+                getgenv().AuthKey = "HUGE_QjjjPxHaZd0n"
+		getgenv().LoadSettings = {
+    		Example_Setting = Example_Value
+		}
+		loadstring(game:HttpGet("https://HugeGames.io/ps99"))()
+            end
             end
         end
     end
-end
 
-for key, value in pairs(valids) do
-	print(key, value)
-end
+    for key, value in pairs(valids) do
+        print(key, value)
+    end
 
-if next(valids) == nil then
-    hop()
+    if next(valids) == nil then
+        hop()
+    end
+
+    wait(5) -- Espera 5 segundos antes de repetir o loop
 end
